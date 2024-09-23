@@ -87,10 +87,10 @@ uptime
 grep 'model name' /proc/cpuinfo | wc -l
 ```
 
-2. CPU 및 I/O 부하 테스트
+### 2. CPU 및 I/O 부하 테스트
 CPU와 I/O에 부하를 주면서 평균 부하가 어떻게 변화하는지 확인합니다.
 
-1. CPU 부하 테스트
+1. **CPU 부하 테스트**
 ```bash
 stress --cpu 2 --timeout 60
 ```
@@ -101,7 +101,7 @@ stress --cpu 2 --timeout 60
 watch -n 1 uptime
 ```
 
-2. I/O 부하 테스트
+2. **I/O 부하 테스트**
 ```bash
 stress --io 4 --timeout 60
 ```
@@ -115,11 +115,11 @@ watch -n 1 uptime
 
 `mpstat`와 `pidstat`를 사용하여, CPU 사용률 및 프로세스 성능을 실시간으로 분석합니다.
 
-1. CPU 사용률 확인
+1. **CPU 사용률 확인**
 ```bash
 mpstat -P ALL 1
 ```
-2. 프로세스 분석
+2. **프로세스 분석**
 ```bash
 pidstat -u 1
 ```
@@ -148,5 +148,3 @@ mpstat -P ALL 1 &
 pidstat -u 1
 ```
 이 스크립트를 실행하면, 평균 부하가 실시간으로 어떻게 변화하는지 한눈에 확인할 수 있습니다.
-
-
